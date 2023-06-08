@@ -1,0 +1,17 @@
+@tailwind base;
+@layer base {
+    body {
+        @apply leading-tight;
+    }
+    ul {
+        @apply list-disc pl-6;
+    }
+}
+@tailwind components;
+
+@layer components {
+}
+@tailwind utilities;
+@layer utilities {
+
+}

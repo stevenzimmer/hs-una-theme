@@ -1,0 +1,11 @@
+node_modules
+dist
+theme.json
+unacast-2022.css
+unacast-2022.js
+
+modules
+templates
+
+!/src/modules
+!/src/templates

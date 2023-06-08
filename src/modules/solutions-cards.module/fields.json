@@ -1,0 +1,95 @@
+[
+  {
+   "children": [
+    {
+     "default": "<h3><strong>Benchmark against your competitors</strong></h3>\n<p>See how you stack up against other brands' visitation trends across locations. Measure your market share and regional dominance over time.&nbsp;</p>",
+     "display_width": null,
+     "id": "text",
+     "label": "Rich Text",
+     "locked": false,
+     "name": "solutions_cards_rt",
+     "required": false,
+     "type": "richtext"
+    },
+    {
+     "default": {
+      "size_type": "auto",
+      "src": "https://2931123.fs1.hubspotusercontent-na1.net/hubfs/2931123/landing-pages/images/Benchmark-Data.jpg",
+      "alt": "Benchmark-Data",
+      "loading": "lazy",
+      "width": 650,
+      "height": 377,
+      "max_width": 650,
+      "max_height": 377
+     },
+     "display_width": null,
+     "id": "e8d12909-68db-28b5-578d-f9306e6e8fe2",
+     "label": "Image",
+     "locked": false,
+     "name": "solutions_card_image",
+     "required": false,
+     "resizable": true,
+     "responsive": true,
+     "show_loading": false,
+     "type": "image"
+    },
+    {
+     "type": "link",
+     "id": "c09cdccf-c31f-31ea-6857-0eee49207aff",
+     "default": {
+      "url": {
+       "content_id": null,
+       "type": "EXTERNAL",
+       "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     },
+     "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG",
+      "CALL_TO_ACTION"
+     ],
+     "label": "Link",
+     "name": "solution_card_link"
+    }
+   ],
+   "default": {
+    "solutions_cards_rt": "<h3><strong>Benchmark against your competitors</strong></h3>\n<p>See how you stack up against other brands' visitation trends across locations. Measure your market share and regional dominance over time.&nbsp;</p>",
+    "solutions_card_image": {
+     "size_type": "auto",
+     "src": "https://2931123.fs1.hubspotusercontent-na1.net/hubfs/2931123/landing-pages/images/Benchmark-Data.jpg",
+     "alt": "Benchmark-Data",
+     "loading": "lazy",
+     "width": 650,
+     "height": 377,
+     "max_width": 650,
+     "max_height": 377
+    },
+    "solution_card_link": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   "display_width": null,
+   "expanded": false,
+   "id": "a7563a2a-5836-95d1-8d13-ca45f1a64aaf",
+   "label": "Solutions Cards",
+   "locked": false,
+   "name": "solutions_cards",
+   "occurrence": {
+    "max": 4
+   },
+   "required": false,
+   "tab": "CONTENT",
+   "type": "group"
+  }
+ ]

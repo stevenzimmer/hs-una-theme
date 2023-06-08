@@ -1,0 +1,7 @@
+.hs-button {
+  @apply text-white font-semibold;
+  &:hover {
+    @apply transform-none bg-opacity-90 !important;
+  }
+}
+/*  */

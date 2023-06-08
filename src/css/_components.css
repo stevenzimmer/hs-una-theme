@@ -1,0 +1,32 @@
+
+.stacked-tabs {
+  .stacked {
+    &-tab {
+      &:hover {
+        .stacked {
+          &-tab {
+            &-border {
+              @apply bg-gradient-to-b from-[#f8b974] via-[#fd8e1d] to-[#ff8000];
+            }
+            
+          }
+        }
+      }
+      &.active {
+        .stacked {
+          &-tab {
+            &-border {
+              @apply bg-gradient-to-b from-[#f8b974] via-[#fd8e1d] to-[#ff8000];
+            }
+
+            &-text {
+              @apply block;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+ 
+}

@@ -1,0 +1,21 @@
+<!-- module html  -->
+
+<div class="flex flex-wrap justify-center -mx-6 mb-12">
+{% for item in module.icon_columns %}
+  <div class="w-1/2 md:!w-1/3 lg:!w-1/5 px-6 mb-6 lg:!mb-0">
+  {% if item.icons_column_icon.src %}
+    {% set sizeAttrs = 'width="{{ item.icons_column_icon.width }}" height="{{ item.icons_column_icon.height }}"' %}
+    {% if item.icons_column_icon.size_type == 'auto' %}
+      {% set sizeAttrs = 'width="{{ item.icons_column_icon.width }}" height="{{ item.icons_column_icon.height }}" style="max-width: 100%; height: auto;"' %}
+    {% elif item.icons_column_icon.size_type == 'auto_custom_max' %}
+      {% set sizeAttrs = 'width="{{ item.icons_column_icon.max_width }}" height="{{ item.icons_column_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+    {% endif %}
+      {% set loadingAttr = item.icons_column_icon.loading != 'disabled' ? 'loading="{{ item.icons_column_icon.loading }}"' : '' %}
+    <img src="{{ item.icons_column_icon.src }}" alt="{{ item.icons_column_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+  {% endif %}
+    <div>
+      <p class="text-white">{{ item.icons_column_text }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

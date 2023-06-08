@@ -1,0 +1,26 @@
+.hs {
+  &-form {
+    &.stacked {
+      @apply border;
+    }
+    .field {
+      label {
+        @apply px-3 text-[14px] font-medium;
+      }
+      .input {
+        .hs {
+          &-input {
+            @apply rounded-lg;
+          }
+        }
+      }
+    }
+    .hs {
+      &-button {
+        @apply text-white bg-[#FF8000] border-[#FF8000] rounded-lg;
+      }
+    }
+    
+  }
+}
+/*  */

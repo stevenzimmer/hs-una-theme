@@ -1,0 +1,50 @@
+[
+  {
+   "type": "group",
+   "id": "45a3b570-19eb-f7f1-e744-92ca4bcc3d11",
+   "label": "Dataset Item",
+   "children": [
+    {
+     "type": "text",
+     "id": "9316fea3-75a3-896f-7f0b-f0c6ec93214b",
+     "validation_regex": "",
+     "label": "Text",
+     "name": "dataset_text"
+    },
+    {
+     "type": "link",
+     "id": "c6a867d7-0913-a15f-36aa-a5174cea6332",
+     "default": {
+      "url": {
+       "content_id": null,
+       "type": "EXTERNAL",
+       "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     },
+     "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "BLOG"
+     ],
+     "label": "Link",
+     "name": "dataset_link"
+    }
+   ],
+   "name": "dataset_item",
+   "default": {
+    "dataset_link": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   "occurrence": {}
+  }
+ ]

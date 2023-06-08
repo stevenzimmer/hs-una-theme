@@ -1,0 +1,60 @@
+[
+  {
+   "type": "group",
+   "id": "255d2211-eebe-6869-22ea-f205b6543903",
+   "label": "Stacked Tabs",
+   "children": [
+    {
+     "type": "text",
+     "id": "e98be4cc-3d63-4f3d-8e57-35753f0b7f33",
+     "validation_regex": "",
+     "label": "Header",
+     "name": "tcts_header",
+     "default": "Retail"
+    },
+    {
+     "type": "text",
+     "id": "04d0adc0-a86c-a520-c6f9-959f7de0c6b2",
+     "validation_regex": "",
+     "label": "Text",
+     "name": "tcts_text",
+     "default": "Comprehensive intelligence from your locations — and your competitors’ locations."
+    },
+    {
+     "type": "image",
+     "id": "005403c5-6596-5928-2be4-12fcdf4220a3",
+     "default": {
+      "size_type": "auto",
+      "src": "https://2931123.fs1.hubspotusercontent-na1.net/hubfs/2931123/landing-pages/images/City-Data-Dark.png",
+      "alt": "City-Data-Dark",
+      "loading": "lazy",
+      "width": 750,
+      "height": 594,
+      "max_width": 750,
+      "max_height": 594
+     },
+     "resizable": true,
+     "responsive": true,
+     "show_loading": false,
+     "label": "Image",
+     "name": "tcts_image"
+    }
+   ],
+   "name": "stacked_tabs",
+   "default": {
+    "tcts_header": "Retail",
+    "tcts_text": "Comprehensive intelligence from your locations — and your competitors’ locations.",
+    "tcts_image": {
+     "size_type": "auto",
+     "src": "https://2931123.fs1.hubspotusercontent-na1.net/hubfs/2931123/landing-pages/images/City-Data-Dark.png",
+     "alt": "City-Data-Dark",
+     "loading": "lazy",
+     "width": 750,
+     "height": 594,
+     "max_width": 750,
+     "max_height": 594
+    }
+   },
+   "occurrence": {}
+  }
+ ]

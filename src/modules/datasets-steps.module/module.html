@@ -1,0 +1,93 @@
+<!-- module html  -->
+{%
+  set steps = [
+    {
+      "title": "Gather multiple data sources",
+      "paragraphs": [
+        "We gather data sources like GPS location data (from 130M+ smartphones and mobile apps), weather, demographics, industry trends, venue attributes, historical data, and more.",
+        "After cleaning, correcting, and preprocessing, these data sources serve as features we feed into our industry unique machine learning model.",
+        "Using multiple data sources allows us to build a more robust and reliable understanding of mobility that is less dependent on GPS data fluctuations and quality because it is based on a magnitude of different context."
+      ]
+    },
+    {
+      "title": "Build machine learning models",
+      "paragraphs": [
+        "From the multiple data sources, we create a feature library that allows us to build our machine learning models that find relationships between different data sources and our target mobility insights.",
+        "Each machine learning algorithm is selected and we train our models on a training dataset to optimize its performance. Thereafter the trained model is evaluated on a validation set for its performance. We address any issues and improvements to the model before putting it in production. Once deployed in production, it runs on new data as it becomes available to calculate mobility insights."
+      ]
+    },
+    {
+      "title": "Create curated datasets",
+      "paragraphs": [
+        "We have datasets depending on your data maturity and needs: Foot Traffic, Dynamic Trade Areas, Cross Visitation, and Migration Patterns.",
+        "A common issue using ML models is that those always give you a prediction without understanding if that is right or wrong. When validated against ground truth data, Unacast's models recorded an R-Squared of 91.6% or higher, widely considered to be best-in-class."
+      ]
+    }
+  ]
+%}
+<div class="relative">
+  
+  <div class="absolute w-full h-full inset-0 ">
+    <div class="flex justify-center h-full">
+      <div class="w-full lg:!w-9/12 h-full">
+        <div class="flex h-full px-6">
+          <div class="w-1/3 px-12">
+            <div class="flex justify-end h-full">
+              <div class="h-full w-[2px] bg-[#b7b7b7] translate-x-[2px] lg:!-translate-x-[13px] relative z-10"></div>
+            </div>
+            
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <div>
+    {% for step in steps %}
+    <div class="flex justify-center first:pt-0 py-6 relative">
+      <div class="w-full lg:!w-9/12">
+          <div class="flex items-center hover:bg-[#f6f6f6] rounded-[8px] cursor-pointer lg:!px-6 dataset-step py-3 select-none">
+            <div class="w-1/3 px-6 lg:!px-12">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-[18px] md:text-[22px] text-[#141a24]">
+                    Step {{loop.index}}
+                  </p>
+                </div>
+                <div>
+                  <div class="w-[28px] h-[28px] rounded-full bg-white border border-[#b7b7b7] dataset-step-bubble relative z-20"></div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="w-3/5 lg:px-6">
+              <h3 class="text-[24px] md:text-[28px] font-bold m-0">
+                {{step.title}}
+              </h3>
+            </div>
+          </div>
+          <div class="flex items-center lg:px-6 dataset-step-body">
+            <div class="w-1/3 px-6">
+              
+            </div>
+            <div class="w-3/5 lg:px-6 ">
+              <div class="dataset-step-body-paragraph mb-3">
+                {% for para in step.paragraphs %}
+                  <p class="text-[16px] {% if !loop.first %} hidden {% endif %}">
+                    {{para}}
+                  </p>
+                {% endfor  %}
+              </div>
+              <div class="read-more relative flex items-center cursor-pointer dataset-step-trigger">
+                <p class="read-more-text m-0 text-[14px] font-medium inline-block relative hover:text-[#ff8000]">Read More</p>
+                <img class="w-[12px] max-w-none h-[12px] ml-[5px] transition-transform duration-200 caret" src="https://assets-global.website-files.com/6165b76ddda1284914a3d106/61661a2f04b550114a24aadc_chevron-down.svg"  alt="Thicc arrown down" >
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+</div>

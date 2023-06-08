@@ -1,0 +1,63 @@
+<!-- module html  -->
+<div class="container">
+
+    <div class="tabs solution hide-on-mobile rotating-tabs w-tabs grid gap-x-4 grid-cols-2">
+
+        <div>
+            <div class="ui-container flex w-full">
+                <div class="ui-nav-container flex items-center flex-wrap justify-between">
+                {% for item in module.tc_tabs %}
+
+                    {# <div class="ui-button"><div>Discover</div></div> #}
+                <a href="#" id="nav-link-{{ loop.index }}" class="nav-link p-6 {% if loop.first %} border-2 {% endif %}}">{{item.tct_title}}</a
+                    >
+                {% endfor %}
+                </div>
+                <div class="ui-nav-container text-center">
+                    <div class="text-block-4">Location: <br />Austin, TX</div>
+                </div>
+            </div>
+        
+            <div class="solutions-tabs-content tab-content">
+            {% for item in module.tc_tabs %}
+                <div
+                class="tab-panel-ui tab-pane p-6 border-2 {% if loop.first %}  {% else %} hidden {% endif %}"
+                role="tabpanel"
+                aria-labelledby="w-tabs-0-data-w-tab-0"
+                style="transition: opacity 300ms ease-in-out 0s; opacity: 1;">
+                    <div class="ui-panel-graphic discover">
+                    
+                        {% if item.tct_bg.src %}
+                            {% set sizeAttrs = 'width="{{ item.tct_bg.width }}" height="{{ item.tct_bg.height }}"' %}
+                            {% if item.tct_bg.size_type == 'auto' %}
+                                {% set sizeAttrs = 'width="{{ item.tct_bg.width }}" height="{{ item.tct_bg.height }}" style="max-width: 100%; height: auto;"' %}
+                            {% elif item.tct_bg.size_type == 'auto_custom_max' %}
+                                {% set sizeAttrs = 'width="{{ item.tct_bg.max_width }}" height="{{ item.tct_bg.max_height }}" style="max-width: 100%; height: auto;"' %}
+                            {% endif %}
+                            {% set loadingAttr = item.tct_bg.loading != 'disabled' ? 'loading="{{ item.tct_bg.loading }}"' : '' %}
+                            <img src="{{ item.tct_bg.src }}" alt="{{ item.tct_bg.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+                
+            </div>
+        </div>
+        <div class="solution-tabs-menu tab-menu" role="tablist">
+            {% for item in module.tc_tabs %}
+                <a
+                class="discover-tab w-inline-block tab-link p-6 block {% if loop.first %}  border-2  {% else %}  {% endif %}"
+                id="w-tabs-0-data-w-tab-0"
+                aria-controls="w-tabs-0-data-w-pane-0"
+                aria-selected="true"
+                >
+                <h3 class="header-small no-bot-mar">{{ item.tct_title}}</h3>
+                <div class="text-xsmall">
+                    {{item.tct_paragraph}}
+                </div>
+                </a
+            >
+            {% endfor %}
+        
+        </div>
+</div>

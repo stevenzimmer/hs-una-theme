@@ -1,0 +1,47 @@
+[
+    {
+     "type": "group",
+     "id": "0ea8b488-1144-321f-bae6-87772a2ba921",
+     "label": "Tabs",
+     "children": [
+      {
+       "type": "text",
+       "id": "6b5b6ca1-c8dc-61ce-defc-2f761f9afa62",
+       "validation_regex": "",
+       "label": "Title",
+       "name": "tct_title"
+      },
+      {
+       "type": "text",
+       "id": "2d8d95d2-2f69-2d77-e216-b2667ac6724c",
+       "validation_regex": "",
+       "label": "Paragraph",
+       "name": "tct_paragraph"
+      },
+      {
+       "type": "image",
+       "id": "184d7742-bf1d-0a91-653b-3d8b75b7b4e8",
+       "default": {
+        "size_type": "auto",
+        "src": "",
+        "alt": null,
+        "loading": "lazy"
+       },
+       "resizable": true,
+       "responsive": true,
+       "show_loading": false,
+       "label": "Background",
+       "name": "tct_bg"
+      }
+     ],
+     "name": "tc_tabs",
+     "default": {
+      "tct_bg": {
+       "size_type": "auto",
+       "src": "",
+       "alt": null,
+       "loading": "lazy"
+      }
+     }
+    }
+   ]

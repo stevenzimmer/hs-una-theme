@@ -1,0 +1,107 @@
+<!--
+    templateType: page
+    label: Page template
+    isAvailableForNewContent: true
+-->
+{% extends "../layouts/base.html" %} 
+{% block body %} 
+
+    {% module "two_column_tabs" path="./../modules/two-column-tabs" label="Two Column Tabs",
+    tc_tabs=[
+        {
+            "tct_title": "Discover",
+            "tct_paragraph": "when, from where, and how long customers visit your locations vs. your competitors' locations.",
+            "tct_bg": {
+                "size_type": "auto",
+                "src": "https://assets-global.website-files.com/6165b76ddda1284914a3d106/639a2521ee496d60f21b66d1_Discover-map.webp",
+                "alt": "v-card-thumbnail",
+                "loading": "lazy",
+                "width": 735,
+                "height": 223,
+                "max_width": 735,
+                "max_height": 223
+          }
+
+        },
+        {
+            "tct_title": "Benchmarks",
+            "tct_paragraph": "against competitors’ foot traffic, peak visitations, and visitor
+            trends.",
+            "tct_bg": {
+                "size_type": "auto",
+                "src": "https://assets-global.website-files.com/6165b76ddda1284914a3d106/639a279302151081d7b996c5_Benchmark-map.webp",
+                "alt": "v-card-thumbnail",
+                "loading": "lazy",
+                "width": 735,
+                "height": 223,
+                "max_width": 735,
+                "max_height": 223
+          },
+
+        },
+        {
+            "tct_title": "Identify",
+            "tct_paragraph": "partnership opportunities, product opportunities, and previously
+            unknown competitors based on cross-visitation data.",
+            "tct_bg": {
+                "size_type": "auto",
+                "src": "https://assets-global.website-files.com/6165b76ddda1284914a3d106/639a377d7ff7867586ffb124_Identify-map.png",
+                "alt": "v-card-thumbnail",
+                "loading": "lazy",
+                "width": 735,
+                "height": 223,
+                "max_width": 735,
+                "max_height": 223
+          },
+          
+
+        },
+        {
+            "tct_title": "Analyze",
+            "tct_paragraph": "potential cannibalization effects, measure localized brand affinity, and conduct void analyses.",
+            "tct_bg": {
+                "size_type": "auto",
+                "src": "https://assets-global.website-files.com/6165b76ddda1284914a3d106/639a279211c0af478113dedc_Analyze-map.webp",
+                "alt": "v-card-thumbnail",
+                "loading": "lazy",
+                "width": 735,
+                "height": 223,
+                "max_width": 735,
+                "max_height": 223
+          },
+          
+        },
+        {
+        "tct_title": "Understand",
+        "tct_paragraph": "the demographics of your customers vs. your competitors’ customers, and identify new opportunities for growth.",
+        "tct_bg": {
+            "size_type": "auto",
+            "src": "https://assets-global.website-files.com/6165b76ddda1284914a3d106/639a279305979d183e952430_Understand-map.webp",
+            "alt": "v-card-thumbnail",
+            "loading": "lazy",
+            "width": 735,
+            "height": 223,
+            "max_width": 735,
+            "max_height": 223
+      },
+      
+
+    },
+    {
+        "tct_title": "Find",
+        "tct_paragraph": "your next potential site before your competitors find it.",
+        "tct_bg": {
+            "size_type": "auto",
+            "src": "https://assets-global.website-files.com/6165b76ddda1284914a3d106/639a2793350e88a03a3cbafe_Find-map.webp",
+            "alt": "v-card-thumbnail",
+            "loading": "lazy",
+            "width": 735,
+            "height": 223,
+            "max_width": 735,
+            "max_height": 223
+      },
+      
+
+    }
+    ] %} 
+{% endblock body %}

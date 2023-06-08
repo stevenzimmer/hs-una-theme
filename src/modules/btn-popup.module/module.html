@@ -1,0 +1,37 @@
+<!-- module html  -->
+{{ require_js("https://unpkg.com/micromodal/dist/micromodal.min.js", "head") }}
+
+
+<div class="{% if module.alignment_style.alignment_field.horizontal_align == "CENTER" %} text-center {% endif %} {% if module.alignment_style.alignment_field.horizontal_align == "RIGHT" %} text-right {% endif %} ">
+
+
+<a href=""  class="btn-popup rounded-[8px] inline-block px-[36px] py-[18px] border-2 border-[#ff8000]
+	{% if module.button.style %}
+		bg-[#ff8000] text-white
+		{% else %}
+		bg-white text-[#ff8000]
+		{% endif %}">{{ module.button.text }}</a>
+	</div>
+<div class="modal micromodal-slide" id="btn-modal" aria-hidden="true">
+	<div class="modal__overlay fixed inset-0 bg-black/80 flex items-center justify-center z-50" tabindex="-1" >
+		
+		<div class="modal__container relative container" role="dialog" aria-modal="true" aria-labelledby="btn-modal-title">
+			<div class="absolute right-2 top-1">
+			
+				<button class="modal__close text-lg cursor-pointer" aria-label="Close modal" data-modal-close="btn-modal"></button>
+			</div>
+
+			<main class="btn-popup-form">
+				{% form
+					form_to_use="{{ module.form.form_id }}"
+					response_response_type="{{ module.form.response_type }}"
+					response_message="{{ module.form.message }}"
+					response_redirect_id="{{ module.form.redirect_id }}"
+					response_redirect_url="{{module.form.redirect_url}}"
+					gotowebinar_webinar_key="{{ module.form.gotowebinar_webinar_key }}"
+				%}
+			</main>
+
+		</div>
+	</div>
+</div>

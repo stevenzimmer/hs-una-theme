@@ -1,0 +1,17 @@
+<!-- module html  -->
+<div class="flex flex-wrap lg:!flex-nowrap justify-center items-center">
+{% for item in module.logos_row_logo %}
+  <div class="w-1/2 sm:!w-auto px-6 py-3">
+	{% if item.src %}
+		{% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}"' %}
+		{% if item.size_type == 'auto' %}
+			{% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}" style="max-width: 100%; height: auto;"' %}
+		{% elif item.size_type == 'auto_custom_max' %}
+			{% set sizeAttrs = 'width="{{ item.max_width }}" height="{{ item.max_height }}" style="max-width: 100%; height: auto;"' %}
+		{% endif %}
+		 {% set loadingAttr = item.loading != 'disabled' ? 'loading="{{ item.loading }}"' : '' %}
+		<img class="mx-auto" src="{{ item.src }}" alt="{{ item.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+	{% endif %}
+  </div>
+{% endfor %}
+</div>

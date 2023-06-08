@@ -1,0 +1,26 @@
+<!-- module html  -->
+<div class="flex items-center flex-wrap justify-center ">
+
+{% for item in module.dataset_item %}
+<div class="pr-3 md:!pr-6 w-1/2 md:!w-auto mb-6 md:mb-0">
+  <div class="py-1 group flex items-stretch">
+    <div class="px-3 md:!px-6">
+      <div class="w-[4px] rounded-full bg-[#F6F6F6] group-hover:bg-[#FF8000] h-full"></div>
+    </div>
+    {% set href = item.dataset_link.url.href %}
+    {% if item.dataset_link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+    {% endif %}
+    <a href="{{ href }}"
+      class="text-black group-hover:text-[#FF8000] text-[18px] md:text-[26px] whitespace-nowrap"
+      {% if item.dataset_link.open_in_new_tab %}target="_blank"{% endif %}
+      {% if item.dataset_link.rel %}rel="{{ item.dataset_link.rel }}"{% endif %}
+      >
+      {{ item.dataset_text }}
+    </a>
+  </div>
+</div>  
+
+{% endfor %}
+
+</div>

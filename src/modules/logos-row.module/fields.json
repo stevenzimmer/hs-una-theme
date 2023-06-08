@@ -1,0 +1,22 @@
+ [
+  {
+   "type": "image",
+   "id": "7f824f00-6ef7-3407-107c-d75aa259932f",
+   "default": {
+    "size_type": "auto_custom_max",
+    "src": "https://2931123.fs1.hubspotusercontent-na1.net/hubfs/2931123/LP%20Template/google.png",
+    "alt": "google",
+    "loading": "lazy",
+    "width": 2000,
+    "height": 676,
+    "max_width": 90,
+    "max_height": 30
+   },
+   "resizable": true,
+   "responsive": true,
+   "show_loading": false,
+   "label": "Logo",
+   "name": "logos_row_logo",
+   "occurrence": {}
+  }
+ ]

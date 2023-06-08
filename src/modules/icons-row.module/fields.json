@@ -1,0 +1,51 @@
+[
+  {
+   "type": "group",
+   "id": "98400044-eadd-a865-4f9f-a4c709c7bce8",
+   "label": "Icon Columns",
+   "children": [
+    {
+     "type": "image",
+     "id": "e41cb66a-244f-429d-5293-c83d5f661dac",
+     "default": {
+      "size_type": "auto",
+      "src": "https://2931123.fs1.hubspotusercontent-na1.net/hubfs/2931123/landing-pages/icons/icons_Intelligences.svg",
+      "alt": "icons_Intelligences",
+      "loading": "lazy",
+      "width": 40,
+      "height": 40,
+      "max_width": 40,
+      "max_height": 40
+     },
+     "resizable": true,
+     "responsive": true,
+     "show_loading": false,
+     "label": "Icon",
+     "name": "icons_column_icon"
+    },
+    {
+     "type": "text",
+     "id": "6d5c5678-df68-359f-2033-622ffa07c550",
+     "validation_regex": "",
+     "label": "Text",
+     "name": "icons_column_text"
+    }
+   ],
+   "name": "icon_columns",
+   "default": {
+    "icons_column_icon": {
+     "size_type": "auto",
+     "src": "https://2931123.fs1.hubspotusercontent-na1.net/hubfs/2931123/landing-pages/icons/icons_Intelligences.svg",
+     "alt": "icons_Intelligences",
+     "loading": "lazy",
+     "width": 40,
+     "height": 40,
+     "max_width": 40,
+     "max_height": 40
+    }
+   },
+   "occurrence": {
+    "max": 5
+   }
+  }
+ ]

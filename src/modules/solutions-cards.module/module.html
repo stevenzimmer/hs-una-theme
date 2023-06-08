@@ -1,0 +1,42 @@
+<!-- module html  -->
+  <div class="flex items-stretch flex-wrap justify-center">
+  {% for item in module.solutions_cards %}
+
+    {% set href = item.solution_card_link.url.href %}
+    {% if item.solution_card_link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+    {% endif %}
+
+
+    <div class="w-full sm:!w-8/12 md:!w-6/12 px-6 mb-12">
+      <div class="border-2 h-full p-6 rounded-lg bg-[#F6F6F6] {% if href %} hover:shadow-lg transition-all hover:-translate-y-0.5 relative {% endif %}">
+      {% if href %}
+          <a href="{{ href }}"
+            class="absolute w-full h-full inset-0"
+            {% if item.solution_card_link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if item.solution_card_link.rel %}rel="{{ item.solution_card_link.rel }}"{% endif %}
+            ></a>
+          {% endif %}
+        <div class="px-6 py-6 text-black">
+        {{ item.solutions_cards_rt }}
+        </div>
+        <div class="">
+
+        {% if item.solutions_card_image.src %}
+          {% set sizeAttrs = 'width="{{ item.solutions_card_image.width }}" height="{{ item.solutions_card_image.height }}"' %}
+          {% if item.solutions_card_image.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.solutions_card_image.width }}" height="{{ item.solutions_card_image.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif item.solutions_card_image.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.solutions_card_image.max_width }}" height="{{ item.solutions_card_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+            {% set loadingAttr = item.solutions_card_image.loading != 'disabled' ? 'loading="{{ item.solutions_card_image.loading }}"' : '' %}
+          <img class="mx-auto" src="{{ item.solutions_card_image.src }}" alt="{{ item.solutions_card_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+          
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+    
+  </div>

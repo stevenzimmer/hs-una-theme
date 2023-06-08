@@ -1,0 +1,38 @@
+<!-- module html  -->
+<div class="flex items-center flex-wrap justify-between stacked-tabs flex-col-reverse md:!flex-row">
+  <div class="w-full md:!w-6/12 lg:!w-7/12 tab-graphic">
+  {% for item in module.stacked_tabs %}
+    <div class="{% if loop.index != 1 %} hidden {% endif%} tab-pane">
+    {% if item.tcts_image.src %}
+      {% set sizeAttrs = 'width="{{ item.tcts_image.width }}" height="{{ item.tcts_image.height }}"' %}
+      {% if item.tcts_image.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item.tcts_image.width }}" height="{{ item.tcts_image.height }}" style="max-width: 100%; height: auto;"' %}
+      {% elif item.tcts_image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.tcts_image.max_width }}" height="{{ item.tcts_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+        {% set loadingAttr = item.tcts_image.loading != 'disabled' ? 'loading="{{ item.tcts_image.loading }}"' : '' %}
+      <img class="mx-auto" src="{{ item.tcts_image.src }}" alt="{{ item.tcts_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+    {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="w-11/12 md:!w-6/12 lg:!w-4/12 tab-menu">
+  {% for item in module.stacked_tabs %}
+    <div class="mb-6 stacked-tab py-2 {% if loop.index == 1 %} active {% endif%} cursor-pointer">
+      <div class="flex items-stretch w-full">
+        <div class="w-[4px] rounded-full bg-white stacked-tab-border"></div>
+        <div class="pl-6 w-full py-2">
+          <p class="text-white text-[26px] font-bold m-0 ">{{ item.tcts_header }}</p>
+
+          <div class="border-b border-white  stacked-tab-text hidden pb-2">
+            <p class="text-white text-[18px]">{{ item.tcts_text }}</p>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  {% endfor %}
+  </div>
+</div>

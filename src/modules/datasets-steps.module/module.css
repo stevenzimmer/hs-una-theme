@@ -1,0 +1,11 @@
+.dataset-step.active .dataset-step-bubble {
+  background-color: rgb(255, 128, 0);
+}
+
+.dataset-step.active ~ .dataset-step-body .dataset-step-body-paragraph p {
+  display:block;
+}
+
+.dataset-step.active ~ .dataset-step-body .dataset-step-trigger .caret {
+  transform:rotate(180deg);
+}
